@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Groundskeeping Nerds</title>
+</head>
+<body>
+    <h1>Grounds Boys</h1>
+    <div id="openweathermap-widget-11"></div>
+<script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: '4671654',appid: '1ac0268fd657e1b1f1bcbae45d60f396',units: 'metric',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+
+    <h2>Current Weather</h2>
+    <p>Temperature: {{ weather_data['main']['temp'] }} F</p>
+    <p>Feels Like: {{ weather_data['main']['feels_like'] }} F</p>
+    <p>Min Temperature: {{ weather_data['main']['temp_min'] }} F</p>
+    <p>Max Temperature: {{ weather_data['main']['temp_max'] }} F</p>
+    <p>Pressure: {{ weather_data['main']['pressure'] }} hPa</p>
+    <p>Humidity: {{ weather_data['main']['humidity'] }}%</p>
+    
+    <h2>Weather</h2>
+    <p>Main: {{ weather_data['weather'][0]['main'] }}</p>
+    <p>Description: {{ weather_data['weather'][0]['description'] }}</p>
+    <p>Cloudiness: {{ weather_data['clouds']['all'] }}%</p>
+    <p>Visibility: {{ weather_data['visibility'] }} meters</p>
+    
+    <h2>Wind</h2>
+    <p>Speed: {{ weather_data['wind']['speed'] }} m/s</p>
+    <p>Degrees: {{ weather_data['wind']['deg'] }}°</p>
+
+ <iframe
+    src="//www.epa.gov/sites/production/files/widgets/ef-uvindex.html"
+    id="uv"
+    width="225"
+    height="150"
+    scrolling="no"
+    frameborder="0"
+    marginwidth="2"
+    marginheight="0">
+</iframe>
+
+<iframe src="https://www.meteoblue.com/en/weather/maps/widget?windAnimation=0&windAnimation=1&gust=0&gust=1&satellite=0&satellite=1&cloudsAndPrecipitation=0&cloudsAndPrecipitation=1&temperature=0&temperature=1&sunshine=0&sunshine=1&extremeForecastIndex=0&extremeForecastIndex=1&geoloc=detect&tempunit=F&windunit=km%252Fh&lengthunit=metric&zoom=5&autowidth=auto"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 100%; height: 720px"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/maps/index?utm_source=weather_widget&utm_medium=linkus&utm_content=map&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener"></a></div>
+
+    <!-- <h2>System</h2>
+    <p>Country: {{ weather_data['sys']['country'] }}</p>
+    <p>Sunrise: {{ weather_data['sys']['sunrise'] }}</p>
+    <p>Sunset: {{ weather_data['sys']['sunset'] }}</p> -->
+
+    
+</body>
+</html>
